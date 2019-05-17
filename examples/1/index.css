@@ -1,0 +1,22 @@
+body {
+	font: 24px "Times New Roman";
+}
+h1 {
+	font-size: 72px;
+	color: red;
+	text-align: center;
+	padding: 30px;
+}
+p {
+	colour: blue; /* You might want to try learning American */
+	text-align: center;
+}
+.thirds {
+	width: 90%;
+	margin: auto;
+}
+.thirds img {
+	width: calc(33% - 31px);
+	margin: 10px;
+	vertical-align: middle;
+}

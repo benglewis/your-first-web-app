@@ -1,0 +1,6 @@
+# How to complete Exercise 1
+
+1. Fix the HTML [index.html] so that now tags (e.g. head/h1) don't show and so that the images are shown.
+2. Fix the CSS [index.css] so that the paragraph text is blue.
+3. Fix the console.log call [index.js] - you will probably see in your browser *console* that we are trying to modify a variable unsuccessfully. You should fix this.
+4. Fix the setTimeout call [index.js].
