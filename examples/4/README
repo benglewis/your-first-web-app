@@ -1,0 +1,17 @@
+# How to complete Exercise 4
+
+## Context
+- We've setup another `create-react-app` application for you in the hello-website folder using the command `npx create-react-app hello-website`.
+- Like exercise 3 we've removed the default rotating logo header but this time we won't have a menu.
+- Like exercise 3 we have renamed all the file extensions to .jsx instead of .js (except elements connected to Redux), we've installed `redux` and `react-redux` for access to Redux, it's React bindings and React Router for ReactDOM, we've added some boilerplate code ready for you to make things a little quicker and we've installed and configured `redux-logger` and `redux-devtools-extension` for easier development with Redux (let's just say that copy-paste was helpful here).
+
+## Steps:
+0. Note how we have added a new Redux middleware called `apiRequest.middleware.js`, this is referenced in `index.js` when configuring Redux.
+1. Implement the new actions in `text.action.js`. Note that we have added a new function called asyncAction. This allows you to define a cleaner interface for API calls. You will use this _instead_ of the *meta* field suggested in the slides. Your action of type GOLDILOCKS_ACTION should make a request of type GET, to Fuck Off As A Service - https://www.foaas.com/ to the /off/:name/:from API and should return `Fuck off, Goldilocks. - Three Little Bears` and you should use their JSON API.
+2. Implement the new reducer in `text.reducer.js`, remember that you must handle *both* `GOLDILOCKS_ACTION.PENDING` and `GOLDILOCKS_ACTION.SUCCESS` in addition to `RESET_ACTION`. Note that the success will return an object with both `message` and `subtitle` fields. You should concatenate these.
+3. Connect the `App.jsx` component to the text in your state.
+4. Connect the `Content.jsx` component to the new actions that you've implemented.
+5. At this point you have everything hooked up, but there's one big piece missing - the middleware. If you play with your app right now, you'll see that the reset button should work, but that the `Goldilocks is coming` button will simply trigger an action with a type that is an object. This isn't correct. What you need to do is to trap actions that have `apiRequest` set to true within on their type (N.B. This is JS, we don't care that most of the time `type` is a string and not an object), launch this request with `fetch` as shown in the slides, dispatching an action of type `type.PENDING` while the API call is made with the starting payload and then launching an action of type `type.SUCCESS` with the results of the JSON call. Don't forget that actions which are not `apiRequest` still need to be passed to the next middleware using `next(action)`.
+
+Congratulations on completing our workshop!
+You can try adding other API calls or actions as you desire if you still have time. Welcome to the world of frontend! :)
