@@ -1,6 +1,21 @@
-# How to complete Exercise 1
+# Exercise 1: Basic HTML, CSS, and JS
 
-1. Fix the HTML [index.html] so that now tags (e.g. head/h1) don't show and so that the images are shown.
-2. Fix the CSS [index.css] so that the paragraph text is blue.
-3. Fix the console.log call [index.js] - you will probably see in your browser *console* that we are trying to modify a variable unsuccessfully. You should fix this.
-4. Fix the setTimeout call [index.js].
+## How to start
+- Open the `index.html` file in your favourite browser.
+   Tip: Don't forget to refresh the page after you make any changes to the code.
+
+## Requirements
+- Your website should present an h1 header `Hello World`.
+- Your website should present a paragraph `Hello to all of the cool cats!!!` in blue.
+- 3 images of cats should be presented beneath the paragraph - you are expected to download three such images from the internet.
+- The images should be equally sized and take up roughly a third of the display each with some padding around each of them.
+- You should see `2` printed in the browser JS console, followed by `3`, followed by the word `"Hello"` which should not appear immediately on page render (after refresh), but rather after 1.5 seconds.
+  Tip: You can usually open your open your JS console by right clicking on any part of the page and clicking "Inspect Element" (which presents you that element in the DOM) and then clicking on the console button. Safari user's should enable the `Develop` menu first in their preferences.
+  Note: You can safely ignore errors or warnings from your browser extensions and not your own code. This can be confusing, but some browser extensions throw errors onto your page that aren't from your code.
+- Your browser JS console should not show any errors errors or warnings.
+
+## Steps
+1. In `index.html` fix the HTML.
+2. Add cat images and verify that they are presented correctly.
+2. In `index.css` fix the CSS.
+3. In `index.js` fix the JS.

@@ -1,19 +1,34 @@
-# How to complete Exercise 3
+# Exercise 3: Using Redux
 
-## Context
+## How to start:
+- Run `npm start` inside the `hello-website` folder to run the React development server. This will launch your application in your browser automatically.
+- Open the `hello-website` folder in order to find all the code relevant to this exercise.
+- Note: This is also a development server.
+
+## Requirements:
+- Your application should have four pages, each of which hosts a simple `h2` heading with the following menu link, page path and text
+  - Link text: `"Home"`; Path: `"/"`; Text: `"The three little bears await"`.
+  - Link text: `"Small Bear"`; Path: `"/smallBear"`; Text: `"Welcome to the small bear's home"`.
+  - Link text: `"Middle-sized Bear"`; Path: `"/middleSizedBear"`; Text: `"Welcome the middle sized bear's home"`
+  - Link text: `"Big Bear"`; Path: `"/bigBear"`; Text `"Welcome the big bear's home"`
+- Your application should have a header that presents an `input` with a `label` that says "Pick font color" and a color `input` which changes both the `h2` heading's colour and the `Menu` component's links colour.
+
+## Steps:
+1. Open `color.action.jsx` in the `actions` folder and follow instructions.
+2. Open `color.reducer.jsx` in the `reducers` folder and follow instructions.
+3. Open the `Header.jsx` component in the root (`hello-website`) and follow instructions.
+4. Open the `App.js` component and follow instructions.
+5. Open the `Menu.jsx` component and follow instructions.
+
+## Optional Steps:
+- Add pictures to the bear pages.
+- Once again, run `npm run build` command to build your React application so that you can share it with others.
+- Take a look at how we have implemented a new Redux store in the `index.jsx` file.
+
+## Context:
 - We've setup another `create-react-app` application for you in the hello-website folder using the command `npx create-react-app hello-website`.
 - Like exercise 2 we've removed the default rotating logo header and updated the App component to present a new Menu component that receives an array of menu entries as a _prop_ named `items`. _However_, this time, this menu element should actually link to the local component pages.
 - Once again we have renamed all the file extensions to .jsx instead of .js.
 - We've installed `redux`, `react-redux` and `react-router-dom` for access to Redux, it's React bindings and React Router for ReactDOM.
 - We've added some boilerplate code ready for you to make things a little quicker.
 - We've installed and configured `redux-logger` and `redux-devtools-extension` for easier development with Redux.
-
-## Steps:
-0. Note how we have implemented a new Redux store in the index.jsx file.
-1. Implement the color action and reducer in the files `color.action.jsx` in the `actions` folder and `color.reducer.jsx` in the `reducers` folder.
-2. Connect the `Header.jsx` component to Redux such that it can change the color in the color reducer by launching an action using the dispatch.
-3. Implement the page react-router-dom `Route` components in the App.js file. We have already created a map on the configuration constant `pages` to save you some time here. N.B. We've added the constant `ifExact` to automatically add the `exact` key to the XML when referring to home, since otherwise it will match all the other pages too - make sure to use this constant in your Route.
-4. Connect the `App.jsx` and `Menu.jsx` components to the state such that the font color is shown correctly.
-5. Implement your `Link` components from react-router-dom in the `Menu.jsx` file; we've already create a map for you to allow you to quickly implement this.
-6. (Optional) Add pictures to the bear pages.
-7. (Optional) Run `npm run build` command to build your React application so that you can share it with others. This will produce a copy of your React application ready to share in the ./build/ directory.

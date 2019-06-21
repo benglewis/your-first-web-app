@@ -1,15 +1,26 @@
-# How to complete Exercise 2
+# Exercise 2: Getting started with React
 
-## Context
+## How to start:
+- Run `npm start` inside the `hello-world` folder to run the React development server. This will launch your application in your browser automatically.
+- Open the `hello-world` folder in order to find all the code relevant to this exercise.
+- Note: Since this is a special development server, it will automatically refresh the webpage after your changes, and so you don't need to refresh on your own after code changes.
+
+## Requirements:
+- Your application should present a menu that shows links to Google and Apple's websites.
+- Your application should present a paragraph with the text `Name:`.
+- Immediately following this paragraph, the application should present a text input box.
+- Your application should present an h1 header that says `Hello NAME` where `NAME` is the value of the text in the input and should update when the user inputs different values into that text box.
+
+## Steps:
+1. Create a new `Menu.jsx` file that will host several links. Use your knowledge of React props.
+   Hint: You can use HTML `span` elements instead of `div`s since they are inline for a horizontal menu or you can use absolute CSS positioning to create a vertical menu.
+2. Go to the `App.jsx` file and follow the hints.
+
+## Optional steps:
+- Run `npm run build` command to build your React application so that you can share it with others. This will produce a copy of your React application ready to serve online in the `./build/` directory.
+
+## Context:
 - We've setup a `create-react-app` application for you in the hello-world folder using the command `npx create-react-app hello-world` (Note: `npx` is Node package manager's (NPM's) direct to execution command which downloads, installs and executes an executable library - in this case - `create-react-app`).
 - We've then removed the default rotating logo header and updated the App component to present a new Menu component that receives an array of menu entries as a _prop_ named `items`.
 - We have renamed all the file extensions to .jsx instead of .js - this isn't the default for `create-react-app` but has better compatibility with JSX syntax highlighting in some editors and works perfectly automatically.
-
-## Execution
-- Run `npm start` inside the hello-world directory to run the React development server. This will launch your application in your browser automatically.
 - For more details of the setup - read the README inside the `hello-world` directory that is provided with `create-react-app`.
-
-## Steps:
-1. Create a new Menu.jsx file that will host several links. You can use HTML `span` elements instead of `div`s since they are inline for a horizontal menu or you can use absolute CSS positioning to create a vertical menu. Use your knowledge of React props.
-2. Replace the CHANGE_NAME_FUNCTION handler with your own React _state hook_ which will update the `name` variable. The default name should be `"No-name"`.
-3. (Optional) Run `npm run build` command to build your React application so that you can share it with others. This will produce a copy of your React application ready to share in the ./build/ directory.
