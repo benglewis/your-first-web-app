@@ -28,9 +28,15 @@ function App() {
       <Header pages={ pages } />
 
       { pages.map(({ path, component }) => {
+          /* Note: We have created a map on configuration constant `pages` to save you time */
           const ifExact = path === "/" ? { exact: true } : {};
+          /* 
+              Note: We added the `ifExact` constant below to automatically add the `exact` key to the XML when 
+              referring to home, since otherwise it will match all the other pages too - make sure to use 
+              this constant in your Route. You can experiment with alternative solutions to this problem/
+          */
 
-          /* Add your Route here */ return null;
+          /* Add react-router-dom `Route` components for each page */ return null;
         })
       }
     </div>
@@ -39,4 +45,5 @@ function App() {
 }
 
 const mapStateToProps = (state) => ({});
+/* Connect this component to the Redux state replacing the color constant with the Redux color state as a prop */
 export default connect(mapStateToProps)(App);

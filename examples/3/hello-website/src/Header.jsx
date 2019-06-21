@@ -6,7 +6,7 @@ import Menu from "./Menu";
 
 const colorChange = () => null; /* Delete this once you've connected to the state */
 
-export const Header = ({ pages }) => <header className="App-header">
+export const Header = ({ pages }) => <header className="App-header"> /* Don't forget the prop */
   <Menu items={ pages }/>
   <div className="colorPicker">
 	  <label htmlFor="color">Pick font color </label>
@@ -15,7 +15,7 @@ export const Header = ({ pages }) => <header className="App-header">
 </header>;
 
 const mapDispatchToProps = (dispatch) => ({
-  
+  /* Connect your component to the Redux dispatch here */
 });
 
 export default connect(null, mapDispatchToProps)(Header);

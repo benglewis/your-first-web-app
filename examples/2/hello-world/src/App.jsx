@@ -18,7 +18,13 @@ function App() {
         }/>
       <h1>Hello {name}</h1>
       <p>Name:</p>
-      <input type="text" onChange={CHANGE_NAME_FUNCTION}/>
+      <input type="text" onChange={
+        CHANGE_NAME_FUNCTION
+        /** 
+          Hint: Replace the `CHANGE_NAME_FUNCTION` handler with your own React _state hook_ 
+          which will update the `name` variable.
+        **/
+      }/>
       </header>
     </div>
   );

@@ -11,6 +11,6 @@ export const Menu = ({ items }) => <ul className="menu">
 </ul>
 
 const mapStateToProps = (state) => ({
-
+	/* Connect this component to the Redux state passing the Redux color state as a prop used by the links */
 });
 export default connect(mapStateToProps)(Menu);
