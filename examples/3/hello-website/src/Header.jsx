@@ -9,7 +9,7 @@ export const Header = ({ pages, colorChange }) => <header className="App-header"
   <Menu items={ pages }/>
   <div className="colorPicker">
 	  <label htmlFor="color">Pick font color </label>
-	  <input type="color" onChange={colorChange} name="color" id="color" />
+	  <input type="color" onChange={ colorChange } name="color" id="color" />
   </div>
 </header>;
 
