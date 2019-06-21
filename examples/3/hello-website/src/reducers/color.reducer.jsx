@@ -1,8 +1,11 @@
+import { COLOR_CHANGE } from "../actions/color.action";
+
 const INITIAL_STATE = "#fff";
 
 export const colorReducer = (previousState = INITIAL_STATE, action) => {
 	switch (action.type) {
-		/* Add a case for your COLOR_CHANGE action here */
+		case COLOR_CHANGE:
+			return action.payload;
 
 		default:
 			return previousState;

@@ -7,11 +7,17 @@ const apiAction = (name) => ({
 export const GOLDILOCKS_ACTION = apiAction("GOLDILOCKS_ACTION");
 export const RESET_ACTION = "RESET_ACTION";
 
-/*
-	Note that we have added a new function called asyncAction.
-	This allows you to define a cleaner interface for API calls.
-	You will use this _instead_ of the *meta* field suggested in the slides.
-*/
-export const goldilocksAction = () => ({}); /* Implement this action */
+export const goldilocksAction = () => ({
+	type: GOLDILOCKS_ACTION,
+	payload: {
+		method: "GET",
+		path: `https://www.foaas.com/off/Goldilocks/Three Little Bears`,
+		headers: new Headers({
+			"Accept": "application/json"
+		})
+	}
+});
 
-export const resetAction = () => ({}); /* Implement this action */
+export const resetAction = () => ({
+	type: RESET_ACTION
+});

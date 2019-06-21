@@ -3,19 +3,18 @@ import { connect } from "react-redux";
 
 import "./Header.css";
 import Menu from "./Menu";
+import { colorChangeAction } from "./actions/color.action";
 
-const colorChange = () => null; /* Delete this once you've connected to the state */
-
-export const Header = ({ pages }) => <header className="App-header"> /* Don't forget the prop */
+export const Header = ({ pages, colorChange }) => <header className="App-header">
   <Menu items={ pages }/>
   <div className="colorPicker">
 	  <label htmlFor="color">Pick font color </label>
-	  <input type="color" onChange={ colorChange } name="color" id="color" />
+	  <input type="color" onChange={colorChange} name="color" id="color" />
   </div>
 </header>;
 
 const mapDispatchToProps = (dispatch) => ({
-  /* Connect your component to the Redux dispatch here */
+  colorChange: (event) => dispatch(colorChangeAction(event.target.value))
 });
 
 export default connect(null, mapDispatchToProps)(Header);

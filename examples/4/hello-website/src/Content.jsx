@@ -2,9 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 
 import "./Content.css";
-
-const goldilocksIsComing = () => null; /* Delete when you implement the dispatch replacing this */
-const resetText = () => null;
+import { goldilocksAction, resetAction } from "./actions/text.action";
 
 export const Content = ({ goldilocksIsComing, resetText }) => <div className="content">
 	<button onClick={ goldilocksIsComing }>Goldilocks is coming</button>
@@ -12,7 +10,8 @@ export const Content = ({ goldilocksIsComing, resetText }) => <div className="co
 </div>;
 
 const mapDispatchToProps = (dispatch) => ({
-	/* Connect your component to the Redux dispatch here */
+  goldilocksIsComing: () => dispatch(goldilocksAction()),
+  resetText: () => dispatch(resetAction())
 });
 
 export default connect(null, mapDispatchToProps)(Content);
